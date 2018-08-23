@@ -57,9 +57,9 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Dooray! Messenger Incoming Hook Sample'
+project = 'TOAST UI Calendar HoL'
 copyright = 'NHN Entertainment'
-author = 'cybaek'
+author = 'FE개발랩 유동식'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
