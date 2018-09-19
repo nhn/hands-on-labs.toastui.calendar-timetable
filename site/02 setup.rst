@@ -19,7 +19,6 @@ TOAST UI Calendar는 npm으로 제공됩니다. 아래와 같이 src 폴더로 �
 .. code-block:: shell
 
    nhnent$ cd hands-on-labs.toastui.calendar-timetable
-   nhnent$ cd src
    nhnent$ npm install tui-calendar
 
 HTML 코드 작성
@@ -46,10 +45,13 @@ HTML 코드 작성
    // src/index.js
 
    const Calendar = require('tui-calendar');
+   require('tui-calendar/dist/tui-calendar.css');
 
    const cal = new Calendar('#calendar', {
      defaultView: 'month'
    });
+
+   cal.render();
 
 
 개발 서버 구동
