@@ -50,15 +50,4 @@
    calendar.setOptions({month: {visibleWeeksCount: 3}}, true);
    calendar.changeView('month', true);
 
-메시지 전송하기
-================================
-
-실습 코드의 `rich.sh`를 수정해서 전송해보세요.
-
-.. literalinclude:: ../rich.sh
-    :language: bash
-
-1. `rich.sh`애 `hook_url`을 추가해서 동작하게 만듭니다.
-2. `attachments`영역을 두 개 만들어 전송합니다.
-
-작성한 sh 파일을 기존 배치 파일 맨 끝에 두어, 실행 결과를 간단히 메신저로 받아볼 수 있습니다.
+쉽죠?

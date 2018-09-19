@@ -12,17 +12,17 @@ TOAST UI Calendar는 오픈소스 자바스크립트 캘린더로 세계인의 �
 학습할 내용
 ============
 
-* TOAST UI Calendar를 사용한 일정 관리
+* TOAST UI Calendar를 사용한 일정 관리 만들기
 
 준비물
 ======
 
-* 지갑
-* 신용카드
 * 익숙한 편집기
+* node.js
+* 브라우저
 
 소스 코드
 ==========
 
-* https://github.com/nhnent/hands-on-labs.XXX
+* https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable
 
