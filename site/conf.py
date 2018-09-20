@@ -59,7 +59,7 @@ master_doc = 'index'
 # General information about the project.
 project = 'TOAST UI Calendar HoL'
 copyright = 'NHN Entertainment'
-author = 'FE개발랩 유동식'
+author = 'Dongsik Yoo'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
