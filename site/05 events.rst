@@ -2,7 +2,7 @@
 이벤트 핸들러 다루기
 ###################
 
-팝업 UI를 통해 일정이 생성/편집/삭제되는 경우, 일정을 클릭한 경우, 마우스를 사용하여 일정을 드래그한 경우 등 이벤트에 대한 처리를 알아 보겠습니다. 이벤트는 `tui-code-snippet <https://github.com/nhnent/tui.code-snippet>`_ 의 `CustomEvents <https://nhnent.github.io/tui.code-snippet/latest/tui.util.CustomEvents.html>`_ 를 믹스인하여 사용합니다. 그래서 사용자 입장에서 간단히 ``.on()`` 함수를 사용하면 됩니다. 
+팝업 UI를 통해 일정이 생성/편집/삭제되는 경우, 일정을 클릭한 경우, 마우스를 사용하여 일정을 드래그한 경우 등 이벤트에 대한 처리를 알아 보겠습니다. 이벤트는 `tui-code-snippet <https://github.com/nhnent/tui.code-snippet>`_ 의 `CustomEvents <https://nhnent.github.io/tui.code-snippet/latest/tui.util.CustomEvents.html>`_ 를 믹스인하여 사용합니다. 사용자는 간단히 ``.on()`` 함수를 사용하면 됩니다.
 
 일정 생성 이벤트
 ==================================
@@ -31,7 +31,7 @@
 일정 편집 이벤트
 ==================================
 
-일정을 클릭하고 Edit 버튼을 누르면 일정 편집 팝업이 나타납니다. 편집 팝업에서 편집 후 저장을 누르거나 마우스를 사용하여 일정을 드래그하는 경우 ``beforeUpdateSchedule`` 이벤트가 발생하고 콜백함수 내에서 ``updateSchedule()`` 을 사용하여 일정을 업데이트할 수 있습니다. 이벤트 훅이므로 필요한 경우 서버에 일정을 업데이트하고 호출하는 식으로 동작하면 되겠습니다.
+일정을 클릭하고 Edit 버튼을 누르면 일정 편집 팝업이 나타납니다. 편집 팝업에서 편집 후 저장을 눌렀을 때, 혹은 마우스를 사용하여 일정을 드래그하는 경우 ``beforeUpdateSchedule`` 이벤트가 발생하고 콜백함수 내에서 ``updateSchedule()`` 을 사용하여 일정을 편집할 수 있습니다. 이벤트 훅이므로 필요한 경우 서버에 일정을 업데이트하고 호출하는 식으로 동작하면 되겠습니다.
 
 .. code-block:: js
 
