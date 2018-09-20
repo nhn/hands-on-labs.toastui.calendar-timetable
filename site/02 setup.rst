@@ -38,7 +38,7 @@ HTML 코드 작성
 자바스크립트 코드 작성
 =====================
 
-`src/index.js` 파일을 생성하여 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성을 해봅시다. 옵션으로 `defaultView: 'month'`를 설정하여 월간뷰로 초기화합니다.
+`src/index.js` 파일을 열고 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성을 해봅시다. 옵션으로 `defaultView: 'month'`를 설정하여 월간뷰로 초기화합니다.
 
 .. code-block:: js
 
@@ -64,4 +64,4 @@ HTML 코드 작성
    nhnent$ npm run server
 
 
-(Bob said) 쉽죠?
+(Bob says) 쉽죠?
