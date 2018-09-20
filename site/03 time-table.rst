@@ -55,11 +55,13 @@
   calendar.setCalendarColor('Major Lecture', {
     color: '#ffffff',
     bgColor: '#ff5583',
+    dragBgColor: '#ff5583',
     borderColor: '#ff5583'
   });
   calendar.setCalendarColor('General Lecture', {
     color: '#ffffff',
     bgColor: '#dc9656',
+    dragBgColor: '#dc9656',
     borderColor: '#dc9656'
   });
 
@@ -82,6 +84,7 @@ OT 일정 등 종일 일정 추가하기
       end: '2018-09-23+09:00',
       color: '#ffffff', // 일정 색상을 직접 지정할 수 있어요
       bgColor: '#03bd9e',
+      dragBgColor: '#03bd9e',
       borderColor: '#03bd9e'
     }
   ]);
@@ -106,6 +109,7 @@ OT 일정 등 종일 일정 추가하기
       end: '2018-09-19T11:30:00+09:00',
       color: '#ffffff', // 일정 색상을 직접 지정할 수 있어요
       bgColor: '#9e5fff',
+      dragBgColor: '#9e5fff',
       borderColor: '#9e5fff'
     }
   ]);
@@ -130,6 +134,7 @@ OT 일정 등 종일 일정 추가하기
       end: '2018-09-19T11:30:00+09:00',
       color: '#ffffff', // 일정 색상을 직접 지정할 수 있어요
       bgColor: '#bbdc00',
+      dragBgColor: '#bbdc00',
       borderColor: '#bbdc00'
     }
   ]);
