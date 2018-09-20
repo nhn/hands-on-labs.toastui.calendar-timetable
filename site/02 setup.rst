@@ -9,7 +9,7 @@
 
 .. code-block:: shell
 
-   nhnent$ git clone https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable.git
+  nhnent$ git clone https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable.git
 
 TOAST UI Calendar 설치
 =====================
@@ -18,8 +18,8 @@ TOAST UI Calendar는 npm으로 제공됩니다. 아래와 같이 src 폴더로 �
 
 .. code-block:: shell
 
-   nhnent$ cd hands-on-labs.toastui.calendar-timetable
-   nhnent$ npm install tui-calendar
+  nhnent$ cd hands-on-labs.toastui.calendar-timetable
+  nhnent$ npm install tui-calendar
 
 HTML 코드 작성
 =====================
@@ -28,30 +28,35 @@ HTML 코드 작성
 
 .. code-block:: html
 
-   // src/index.html
+  // src/index.html
 
-   <body>
-   ...
-    <div id="calendar" style="height: 800px;"></div>
-   </body>
+  <body>
+  ...
+  <div id="calendar" style="height: 800px;"></div>
+  </body>
 
 자바스크립트 코드 작성
 =====================
 
-`src/index.js` 파일을 열고 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성을 해봅시다. 옵션으로 `defaultView: 'month'`를 설정하여 월간뷰로 초기화합니다.
+`src/index.js` 파일을 열고 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성을 해봅시다.
+
+옵션으로 `defaultView: 'week'`를 설정하여 주간뷰로 초기화합니다.
+필요한 팝업은 기본으로 제공하는 팝업을 씁니다.(옵션 useCreationPopup, useDetailPopup)
 
 .. code-block:: js
 
-   // src/index.js
+  // src/index.js
 
-   const Calendar = require('tui-calendar');
-   require('tui-calendar/dist/tui-calendar.css');
+  const Calendar = require('tui-calendar');
+  require('tui-calendar/dist/tui-calendar.css');
 
-   const cal = new Calendar('#calendar', {
-     defaultView: 'month'
-   });
+  const calendar = new Calendar('#calendar', {
+    defaultView: 'week',
+    useCreationPopup: true,
+    useDetailPopup: true
+  });
 
-   cal.render();
+  calendar.render();
 
 
 개발 서버 구동
@@ -61,7 +66,7 @@ HTML 코드 작성
 
 .. code-block:: shell
 
-   nhnent$ npm run server
+  nhnent$ npm run server
 
 
 (Bob says) 쉽죠?
