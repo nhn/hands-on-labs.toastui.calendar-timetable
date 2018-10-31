@@ -1,0 +1,322 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. 다양하게 캘린더 보기 &mdash; TOAST UI Calendar HoL 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="5. 이벤트 핸들러 다루기" href="05 events.html" />
+    <link rel="prev" title="3. 2학기 수업 시간표 만들기" href="03 time-table.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TOAST UI Calendar HoL
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01 overview.html">1. 개요</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02 setup.html">2. 쉬운 환경 설정</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03 time-table.html">3. 2학기 수업 시간표 만들기</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. 다양하게 캘린더 보기</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.1. 일간/주간/월간 보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">4.2. 마일스톤/업무 보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4.3. 일정 보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">4.4. 주말을 제외하고 보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">4.5. 월간 2~6주뷰 보기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">4.6. 동적으로 보기 전환하기</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05 events.html">5. 이벤트 핸들러 다루기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrap-up.html">6. 정리</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TOAST UI Calendar HoL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>4. 다양하게 캘린더 보기</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>4. 다양하게 캘린더 보기<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<p>TOAST UI Calendar는 다양한 타입의 보기를 제공합니다. 일간/주간/월간 보기가 기본입니다. 일간/주간 보기에서는 업무와 마일스톤 패널을 옵션에 따라 표시할 수 있고, 월간 보기에서는 2~6주뷰까지 기호에 맞게 다양하게 설정할 수 있습니다.</p>
+<p>모든 보기 타입은 초기화 옵션에서 지정할 수 있고 초기화 후에도 API를 사용하여 보기를 변경할 수 있습니다.</p>
+<div class="section" id="id2">
+<h2>4.1. 일간/주간/월간 보기<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">defaultView</span></code> 속성에 들어갈 수 있는 값은 <code class="docutils literal notranslate"><span class="pre">'day'</span></code>, <code class="docutils literal notranslate"><span class="pre">'week'</span></code>, <code class="docutils literal notranslate"><span class="pre">'month'</span></code> 로 각각 일간/주간/월간 보기입니다. 아래 코드를 참조하여 <code class="docutils literal notranslate"><span class="pre">defaultView</span></code> 속성을 바꿔가며 브라우저에서 테스트 해보세요.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
+
+<span class="p">...</span>
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;#calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">defaultView</span><span class="o">:</span> <span class="s1">&#39;daily&#39;</span><span class="p">,</span> <span class="c1">// &#39;week&#39;, &#39;month&#39;</span>
+  <span class="p">...</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>4.2. 마일스톤/업무 보기<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">taskView</span></code> 속성은 마일스톤/업무 보기를 설정합니다. 일간/주간 보기에서만 지원되는 기능입니다. 기본값이 <code class="docutils literal notranslate"><span class="pre">true</span></code> 이므로 여기서는 보이지 않도록 설정해 보겠습니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
+
+<span class="p">...</span>
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;#calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">taskView</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">...</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>4.3. 일정 보기<a class="headerlink" href="#id4" title="제목 주소">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">scheduleView</span></code> 속성은 일정 보기를 설정합니다. 일간/주간 보기에서만 지원되는 기능입니다. 기본값이 <code class="docutils literal notranslate"><span class="pre">true</span></code> 이므로 여기서는 보이지 않도록 설정해 보겠습니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
+
+<span class="p">...</span>
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;#calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="p">..</span>
+  <span class="nx">scheduleView</span><span class="o">:</span> <span class="kc">false</span>
+  <span class="p">...</span>
+<span class="p">});.</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>4.4. 주말을 제외하고 보기<a class="headerlink" href="#id5" title="제목 주소">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">workweek</span></code> 속성은 주말 표시를 설정합니다. 일간/주간/월간 보기에서 지원되는 기능입니다. 기본값이 <code class="docutils literal notranslate"><span class="pre">false</span></code> 입니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
+
+<span class="p">...</span>
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;#calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">month</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">workweek</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="p">},</span>
+  <span class="nx">week</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">workweek</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>4.5. 월간 2~6주뷰 보기<a class="headerlink" href="#id6" title="제목 주소">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">visibleWeeksCount</span></code> 속성은 월간뷰에서 표시할 주의 갯수를 설정합니다. 기본값은 <code class="docutils literal notranslate"><span class="pre">6</span></code> 이며 <cite>2~6</cite> 까지 설정할 수 있습니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
+
+<span class="p">...</span>
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;#calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="p">...</span>
+  <span class="nx">month</span><span class="o">:</span> <span class="p">{</span>
+    <span class="nx">visibleWeeksCount</span><span class="o">:</span> <span class="mi">2</span> <span class="c1">// 2~6까지 설정 가능</span>
+  <span class="p">}</span>
+  <span class="p">...</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id7">
+<h2>4.6. 동적으로 보기 전환하기<a class="headerlink" href="#id7" title="제목 주소">¶</a></h2>
+<p>초기 설정 후에도 <code class="docutils literal notranslate"><span class="pre">changeView(viewType,</span> <span class="pre">forceRedraw)</span></code> 를 사용하여 보기 타입을 동적으로 변경할 수 있습니다. 두번째</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 일간 보기</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">changeView</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// 주간 보기</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">changeView</span><span class="p">(</span><span class="s1">&#39;week&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// 월간 보기</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">changeView</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+
+<span class="c1">// 월간 2주 보기</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">setOptions</span><span class="p">({</span><span class="nx">month</span><span class="o">:</span> <span class="p">{</span><span class="nx">visibleWeeksCount</span><span class="o">:</span> <span class="mi">2</span><span class="p">}},</span> <span class="kc">true</span><span class="p">);</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">changeView</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>
+</pre></div>
+</div>
+<p>쉽죠?</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="05 events.html" class="btn btn-neutral float-right" title="5. 이벤트 핸들러 다루기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="03 time-table.html" class="btn btn-neutral" title="3. 2학기 수업 시간표 만들기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright NHN Entertainment.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'ko',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

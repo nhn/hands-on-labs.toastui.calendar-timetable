@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>2. 쉬운 환경 설정 &mdash; TOAST UI Calendar HoL 1.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="3. 2학기 수업 시간표 만들기" href="03 time-table.html" />
+    <link rel="prev" title="1. 개요" href="01 overview.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TOAST UI Calendar HoL
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01 overview.html">1. 개요</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">2. 쉬운 환경 설정</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">2.1. 깃헙 클론</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#toast-ui-calendar">2.2. TOAST UI Calendar 설치</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#html">2.3. HTML 코드 작성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">2.4. 자바스크립트 코드 작성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id8">2.5. 개발 서버 구동</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="03 time-table.html">3. 2학기 수업 시간표 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="04 types.html">4. 다양하게 캘린더 보기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05 events.html">5. 이벤트 핸들러 다루기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrap-up.html">6. 정리</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TOAST UI Calendar HoL</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>2. 쉬운 환경 설정</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>2. 쉬운 환경 설정<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<div class="section" id="id2">
+<h2>2.1. 깃헙 클론<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<p>먼저 핸즈온랩을 위해 기본 환경이 미리 준비된 소스를 받습니다.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nhnent$ git clone https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable.git
+</pre></div>
+</div>
+</div>
+<div class="section" id="toast-ui-calendar">
+<h2>2.2. TOAST UI Calendar 설치<a class="headerlink" href="#toast-ui-calendar" title="제목 주소">¶</a></h2>
+<p>TOAST UI Calendar는 npm으로 제공됩니다. 아래와 같이 src 폴더로 이동한 후 command로 설치합니다.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nhnent$ <span class="nb">cd</span> hands-on-labs.toastui.calendar-timetable
+nhnent$ npm install tui-calendar
+</pre></div>
+</div>
+</div>
+<div class="section" id="html">
+<h2>2.3. HTML 코드 작성<a class="headerlink" href="#html" title="제목 주소">¶</a></h2>
+<p>준비된 <cite>src/index.html</cite> 파일을 열어 body 태그 내부에 container 태그를 작성해 줍니다.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>// src/index.html
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+...
+<span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;calendar&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;height: 800px;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id3">
+<h2>2.4. 자바스크립트 코드 작성<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
+<p><cite>src/index.js</cite> 파일을 열고 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성을 해봅시다.</p>
+<p>옵션으로 <a href="#id4"><span class="problematic" id="id5">`</span></a>defaultView: 'week'<a href="#id6"><span class="problematic" id="id7">`</span></a>를 설정하여 주간뷰로 초기화합니다.
+필요한 팝업은 기본으로 제공하는 팝업을 씁니다.(옵션 useCreationPopup, useDetailPopup)</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
+
+<span class="kr">const</span> <span class="nx">Calendar</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;tui-calendar&#39;</span><span class="p">);</span>
+<span class="nx">require</span><span class="p">(</span><span class="s1">&#39;tui-calendar/dist/tui-calendar.css&#39;</span><span class="p">);</span>
+
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="s1">&#39;#calendar&#39;</span><span class="p">,</span> <span class="p">{</span>
+  <span class="nx">defaultView</span><span class="o">:</span> <span class="s1">&#39;week&#39;</span><span class="p">,</span>
+  <span class="nx">useCreationPopup</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="nx">useDetailPopup</span><span class="o">:</span> <span class="kc">true</span>
+<span class="p">});</span>
+
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">render</span><span class="p">();</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id8">
+<h2>2.5. 개발 서버 구동<a class="headerlink" href="#id8" title="제목 주소">¶</a></h2>
+<p>번들러는 <a href="#id9"><span class="problematic" id="id10">`</span></a>Webpack`을 사용하고 <a href="#id11"><span class="problematic" id="id12">`</span></a>webpack-dev-server`를 사용하여 개발 서버를 설정해 두었습니다. 아래와 같이 간단히 서버를 구동하여 TOAST UI Calendar의 기본 모습을 확인해 봅시다.</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>nhnent$ npm run server
+</pre></div>
+</div>
+<p>(Bob says) 쉽죠?</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="03 time-table.html" class="btn btn-neutral float-right" title="3. 2학기 수업 시간표 만들기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01 overview.html" class="btn btn-neutral" title="1. 개요" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright NHN Entertainment.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0',
+            LANGUAGE:'ko',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
