@@ -57,8 +57,10 @@
 
   ...
   calendar.on('beforeDeleteSchedule', scheduleData => {
-    const {schedule} = scheduleData;
+    const {schedule, start, end} = scheduleData;
 
+    schedule.start = start;
+    schedule.end = end;
     calendar.deleteSchedule(schedule.id, schedule.calendarId);
   });
 
