@@ -26,6 +26,8 @@
     };
 
     calendar.createSchedules([schedule]);
+
+    alert('일정 생성 완료');
   });
 
 일정 편집 이벤트
@@ -39,12 +41,9 @@
 
   ...
   calendar.on('beforeUpdateSchedule', scheduleData => {
-    const {schedule, start, end} = scheduleData;
+    const {schedule} = scheduleData;
 
-    calendar.updateSchedule(schedule.id, schedule.calendarId, {
-      start,
-      end
-    });
+    calendar.updateSchedule(schedule.id, schedule.calendarId, schedule);
   });
 
 일정 삭제 이벤트

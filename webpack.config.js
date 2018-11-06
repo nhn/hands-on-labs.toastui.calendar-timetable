@@ -8,7 +8,12 @@ module.exports = {
     rules: [
       {
         test: /\.js$/,
-        use: 'eslint-loader'
+        use: [{
+          loader: 'eslint-loader',
+          options: {
+            emitWarning: true
+          }
+        }]
       },
       {
         test: /\.css$/,

@@ -1,27 +1,28 @@
 ######################
-쉬운 환경 설정
+설치 및 서버 실행
 ######################
 
-깃헙 클론
+프로젝트 설치
 =====================
 
-먼저 핸즈온랩을 위해 기본 환경이 미리 준비된 소스를 받습니다.
+터미널을 열어 미리 준비된 프로젝트를 클론 받습니다.
 
 .. code-block:: shell
 
-  nhnent$ git clone https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable.git
+  git clone https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable.git
 
 TOAST UI Calendar 설치
 =====================
 
-TOAST UI Calendar는 npm으로 제공됩니다. 아래와 같이 src 폴더로 이동한 후 command로 설치합니다.
+TOAST UI Calendar는 npm으로 제공됩니다. 아래와 같이 프로젝트 폴더로 이동한 후 패키지와 TOAST UI Calendar를 설치합니다.
 
 .. code-block:: shell
 
-  nhnent$ cd hands-on-labs.toastui.calendar-timetable
-  nhnent$ npm install tui-calendar
+  cd hands-on-labs.toastui.calendar-timetable
+  npm install
+  npm install tui-calendar
 
-HTML 코드 작성
+HTML 초기 코드 작성
 =====================
 
 준비된 `src/index.html` 파일을 열어 body 태그 내부에 container 태그를 작성해 줍니다.
@@ -35,20 +36,22 @@ HTML 코드 작성
   <div id="calendar" style="height: 800px;"></div>
   </body>
 
-자바스크립트 코드 작성
+자바스크립트 초기 코드 작성
 =====================
 
 `src/index.js` 파일을 열고 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성을 해봅시다.
 
-옵션으로 `defaultView: 'week'`를 설정하여 주간뷰로 초기화합니다.
-필요한 팝업은 기본으로 제공하는 팝업을 씁니다.(옵션 useCreationPopup, useDetailPopup)
+옵션으로 ``defaultView: 'week'`` 를 설정하여 주간뷰로 초기화합니다.
+필요한 팝업은 기본으로 제공하는 팝업을 씁니다.(옵션 ``useCreationPopup`` , ``useDetailPopup`` )
 
 .. code-block:: js
 
   // src/index.js
 
-  const Calendar = require('tui-calendar');
-  require('tui-calendar/dist/tui-calendar.css');
+  import Calendar from 'tui-calendar';
+  import 'tui-calendar/dist/tui-calendar.css';
+  import 'tui-date-picker/dist/tui-date-picker.css';
+  import 'tui-time-picker/dist/tui-time-picker.css';
 
   const calendar = new Calendar('#calendar', {
     defaultView: 'week',
@@ -59,14 +62,14 @@ HTML 코드 작성
   calendar.render();
 
 
-개발 서버 구동
+개발 서버 실행
 =====================
 
-번들러는 `Webpack`을 사용하고 `webpack-dev-server`를 사용하여 개발 서버를 설정해 두었습니다. 아래와 같이 간단히 서버를 구동하여 TOAST UI Calendar의 기본 모습을 확인해 봅시다.
+번들러는 `Webpack` 을 사용하고 `webpack-dev-server` 를 사용하여 개발 서버를 설정해 두었습니다. 아래와 같이 간단히 서버를 실행하고 브라우저로 http://localhost:8080 에 접속합니다. 그리고 TOAST UI Calendar의 기본 모습을 확인해 봅시다.
 
 .. code-block:: shell
 
-  nhnent$ npm run server
+  npm run server
 
 
-(Bob says) 쉽죠?
+(Bob says) 참 쉽죠?
