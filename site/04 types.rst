@@ -96,8 +96,7 @@ TOAST UI Calendar는 다양한 타입의 보기를 제공합니다. 일간/주�
 동적으로 보기 전환하기
 =================
 
-초기 설정 후에도 ``changeView(viewType, forceRedraw)`` 를 사용하여 보기 타입을 동적으로 변경할 수 있습니다. 두번째
-
+초기 설정 후에도 ``changeView(viewType, forceRedraw)`` 를 사용하여 보기 타입을 동적으로 변경할 수 있습니다. 타입별로 바꾸어보세요.
 
 .. code-block:: js
 
