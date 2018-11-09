@@ -64,4 +64,5 @@
     calendar.deleteSchedule(schedule.id, schedule.calendarId);
   });
 
+축하합니다. 이제 여러분의 서비스에 바로 적용해 보세요.
 쉽죠?
