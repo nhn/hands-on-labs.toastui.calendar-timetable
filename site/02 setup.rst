@@ -65,7 +65,7 @@ HTML 초기 코드 작성
 개발 서버 실행
 =====================
 
-번들러는 `Webpack` 을 사용하고 `webpack-dev-server` 를 사용하여 개발 서버를 설정해 두었습니다. 아래와 같이 간단히 서버를 실행하고 브라우저로 http://localhost:8080 에 접속합니다. 그리고 TOAST UI Calendar의 기본 모습을 확인해 봅시다.
+번들러는 `Webpack <https://webpack.js.org/>`_ 을 사용하고 `webpack-dev-server <https://github.com/webpack/webpack-dev-server>`_ 를 사용하여 개발 서버를 설정해 두었습니다. 아래와 같이 간단히 서버를 실행하고 브라우저로 http://localhost:8080 에 접속합니다. 그리고 TOAST UI Calendar의 기본 모습을 확인해 봅시다.
 
 .. code-block:: shell
 
