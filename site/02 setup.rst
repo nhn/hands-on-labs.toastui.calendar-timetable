@@ -14,7 +14,7 @@
 TOAST UI Calendar 설치
 =====================
 
-TOAST UI Calendar는 npm으로 제공됩니다. 아래와 같이 프로젝트 폴더로 이동한 후 패키지와 TOAST UI Calendar를 설치합니다.
+TOAST UI Calendar는 `npm <https://www.npmjs.com/>`_ 으로 제공됩니다. 아래와 같이 프로젝트 폴더로 이동한 후 패키지와 TOAST UI Calendar를 설치합니다.
 
 .. code-block:: shell
 
