@@ -4,7 +4,7 @@
   "description": "NHN Forward 2018",
   "main": "./index.js",
   "scripts": {
-    "server": "webpack-dev-server"
+    "serve": "webpack-dev-server"
   },
   "repository": {
     "type": "git",
