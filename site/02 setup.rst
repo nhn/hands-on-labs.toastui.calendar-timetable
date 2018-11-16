@@ -69,7 +69,7 @@ HTML 초기 코드 작성
 
 .. code-block:: shell
 
-  npm run server
+  npm run serve
 
 
 (Bob says) 참 쉽죠?
