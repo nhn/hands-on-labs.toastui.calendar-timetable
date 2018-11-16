@@ -15,4 +15,6 @@ TOAST UI Calendar는 `Dooray! <https://dooray.com>`_ 에서 시작하여 2년 �
 다음 단계
 =================
 
-* 캘린더는 협업 도구에 필수적인 서비스입니다. 협업 도구의 모든 것, https://dooray.com 에서 Dooray! 캘린더를 사용해 보세요.
+* TOAST UI Editor 유튜브 익스텐션 개발하기
+* TOAST UI Chart를 사용해 차트 대시보드 만들기
+* TOAST UI Grid로 가계부 만들기
