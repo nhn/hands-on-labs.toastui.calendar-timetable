@@ -57,9 +57,9 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = 'TOAST UI Calendar HoL'
+project = 'TOAST UI Calendar로 시간표 만들기'
 copyright = 'NHN Entertainment'
-author = 'Dongsik Yoo'
+author = ''
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -350,3 +350,5 @@ texinfo_documents = [
 # texinfo_no_detailmenu = False
 
 
+def setup(app):
+    app.add_stylesheet('css/custom.css')
