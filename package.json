@@ -19,7 +19,7 @@
     "labs",
     "tui-calendar"
   ],
-  "author": "dongsik-yoo",
+  "author": ["dongsik-yoo", "jungeun-cho"],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable/issues"

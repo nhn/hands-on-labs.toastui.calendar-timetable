@@ -57,8 +57,8 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = 'TOAST UI Calendar로 시간표 만들기'
-copyright = 'NHN Entertainment'
+project = 'Create Timetables with TOAST UI Calendar'
+copyright = 'NHN Corp. All rights reserved.'
 author = ''
 
 # The version info for the project you're documenting, acts as replacement for
