@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable.git"
+    "url": "git+https://github.com/nhn/hands-on-labs.toastui.calendar-timetable.git"
   },
   "keywords": [
     "NHN",
@@ -22,9 +22,9 @@
   "author": ["dongsik-yoo", "jungeun-cho"],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable/issues"
+    "url": "https://github.com/nhn/hands-on-labs.toastui.calendar-timetable/issues"
   },
-  "homepage": "https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable#readme",
+  "homepage": "https://github.com/nhn/hands-on-labs.toastui.calendar-timetable#readme",
   "devDependencies": {
     "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^1.0.0",
