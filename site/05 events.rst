@@ -2,7 +2,7 @@
 이벤트 핸들러 다루기
 ###################
 
-팝업 UI를 통해 일정이 생성/편집/삭제되는 경우, 일정을 클릭한 경우, 마우스를 사용하여 일정을 드래그한 경우 등 이벤트에 대한 처리를 알아 보겠습니다. 이벤트는 `tui-code-snippet <https://github.com/nhnent/tui.code-snippet>`_ 의 `CustomEvents <https://nhnent.github.io/tui.code-snippet/latest/tui.util.CustomEvents.html>`_ 를 믹스인하여 사용합니다. 사용자는 간단히 ``.on()`` 함수를 사용하면 됩니다.
+팝업 UI를 통해 일정이 생성/편집/삭제되는 경우, 일정을 클릭한 경우, 마우스를 사용하여 일정을 드래그한 경우 등 이벤트에 대한 처리를 알아 보겠습니다. 이벤트는 `tui-code-snippet <https://github.com/nhn/tui.code-snippet>`_ 의 `CustomEvents <https://nhn.github.io/tui.code-snippet/latest/CustomEvents>`_ 를 믹스인하여 사용합니다. 사용자는 간단히 ``.on()`` 함수를 사용하면 됩니다.
 
 일정 생성 이벤트
 ==================================
@@ -64,5 +64,4 @@
     calendar.deleteSchedule(schedule.id, schedule.calendarId);
   });
 
-축하합니다. 이제 여러분의 서비스에 바로 적용해 보세요.
-쉽죠?
+짝짝짝! 축하합니다. 이제 여러분의 서비스에 바로 TOAST UI 캘린더를 적용해 보세요. :)

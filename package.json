@@ -1,6 +1,6 @@
 {
   "name": "hands-on-labs.toastui.calendar-timetable",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NHN Forward 2018",
   "main": "./index.js",
   "scripts": {
