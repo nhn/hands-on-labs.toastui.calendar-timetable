@@ -9,7 +9,7 @@
 
 .. code-block:: shell
 
-  git clone https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable.git
+  git clone https://github.com/nhn/hands-on-labs.toastui.calendar-timetable.git
 
 TOAST UI Calendar 설치
 =====================
@@ -43,10 +43,10 @@ HTML 초기 코드 작성
 자바스크립트 초기 코드 작성
 =====================
 
-`src/index.js` 파일을 열고 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성을 해봅시다.
+`src/index.js` 파일을 열고 초기화 코드를 작성합니다. TOAST UI Calendar 모듈을 가져와서 간단하게 캘린더를 생성해봅시다.
 
-옵션으로 ``defaultView: 'week'`` 를 설정하여 주간뷰로 초기화합니다.
-필요한 팝업은 기본으로 제공하는 팝업을 씁니다.(옵션 ``useCreationPopup`` , ``useDetailPopup`` )
+옵션으로 ``defaultView: 'week'`` 를 설정하여 주간 뷰로 초기화합니다.
+필요한 팝업은 기본으로 제공하는 팝업을 사용합니다. (옵션 ``useCreationPopup`` , ``useDetailPopup`` )
 
 .. code-block:: js
 

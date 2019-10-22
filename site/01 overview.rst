@@ -5,7 +5,7 @@
 
 TOAST UI Calendar는 오픈소스 자바스크립트 캘린더로 세계인의 사랑을 받고 있습니다. 깔끔한 일정 관리 UI를 내 서비스에 연동하고 싶다면 이번 핸즈온랩에서 경험해 보세요.
 
-일반 일정, 종일 일정, 업무 일정, 마일스톤 일정 관리 뿐만 아니라 마우스를 이용하여 일정 이동, 기간 변경을 할 수 있고, 일간/주간/월간/2주/3주 단위로 보기를 제공하여 일정을 보기가 훨씬 좋습니다.
+일반 일정, 종일 일정, 업무 일정, 마일스톤 일정 관리뿐만 아니라 마우스를 이용하여 일정 이동, 기간 변경을 할 수 있고, 일간/주간/월간/2주/3주 단위로 보기를 제공하여 일정을 보기가 훨씬 좋습니다.
 
 
 
@@ -27,4 +27,4 @@ TOAST UI Calendar는 오픈소스 자바스크립트 캘린더로 세계인의 �
 
 .. |link_1| raw:: html
 
-  <a href="https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable" target="_blank">https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable</a>
+  <a href="https://github.com/nhn/hands-on-labs.toastui.calendar-timetable" target="_blank">https://github.com/nhn/hands-on-labs.toastui.calendar-timetable</a>
