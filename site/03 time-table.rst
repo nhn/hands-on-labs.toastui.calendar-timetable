@@ -2,14 +2,22 @@
 2학기 수업 시간표 만들기
 ###################
 
-우선 API 문서는 `여기 <https://nhn.github.io/tui.calendar/latest/Calendar>`_ 에 있습니다. 자, 그럼 시작해 볼까요?
+우선 API 문서는 |link_6| 에 있습니다. 자, 그럼 시작해 볼까요?
+
+.. |link_6| raw:: html
+
+  <a href="https://nhn.github.io/tui.calendar/latest/Calendar" target="_blank">여기</a>
 
 요일별 강의 일정 입력하기
 =====================
 
-먼저, 2학기 수업 시간표를 작성해 보겠습니다. API를 사용하여 일정을 추가하는 방법입니다. ``createSchedules`` 함수를 사용하여 두 개의 일정을 배열로 전달합니다. 일정 프로퍼티는 다음 문서 `Schedule 객체 <https://nhn.github.io/tui.calendar/latest/Schedule>`_ 를 참고하세요.
+먼저, 2학기 수업 시간표를 작성해 보겠습니다. API를 사용하여 일정을 추가하는 방법입니다. ``createSchedules`` 함수를 사용하여 두 개의 일정을 배열로 전달합니다. 일정 프로퍼티는 다음 문서 |link_7| 를 참고하세요.
 
 각 캘린더는 ``calendarId`` 로 구분되며 일정의 집합을 나타냅니다. ``calendarId`` 를 다르게 하면 다른 캘린더를 만들 수 있습니다. 그리고 ``start`` 와 ``end`` 는 원하는 날짜와 시간을 지정해 주어야 합니다. 아래 내용과 비슷하게 코드를 추가해 보겠습니다. 소스를 작성하고 저장 후 브라우저에서 확인해 볼까요?
+
+.. |link_7| raw:: html
+
+  <a href="https://nhn.github.io/tui.calendar/latest/Schedule" target="_blank">Schedule 객체</a>
 
 .. code-block:: js
 
@@ -139,4 +147,4 @@ OT 일정 등 종일 일정 추가하기
     }
   ]);
 
-쉽죠?
+이제 여러분은 캘린더에 새 일정을 추가하고 색깔도 지정할 수 있습니다.

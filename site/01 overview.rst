@@ -23,6 +23,8 @@ TOAST UI Calendar는 오픈소스 자바스크립트 캘린더로 세계인의 �
 
 소스 코드
 ==========
+* |link_1|
 
-* https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable
+.. |link_1| raw:: html
 
+  <a href="https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable" target="_blank">https://github.com/nhnent/hands-on-labs.toastui.calendar-timetable</a>

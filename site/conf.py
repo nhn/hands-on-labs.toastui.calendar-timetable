@@ -57,7 +57,7 @@ source_encoding = 'utf-8'
 master_doc = 'index'
 
 # General information about the project.
-project = 'Create Timetables with TOAST UI Calendar'
+project = 'Create Timetables <br>with TOAST UI Calendar'
 copyright = 'NHN Corp. All rights reserved.'
 author = ''
 

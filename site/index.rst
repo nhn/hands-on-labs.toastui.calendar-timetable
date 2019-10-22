@@ -1,5 +1,5 @@
 ****************************************
-Create Timetables with TOAST UI Calendar
+Create Timetables <br>with TOAST UI Calendar
 ****************************************
 
 * 카테고리: API

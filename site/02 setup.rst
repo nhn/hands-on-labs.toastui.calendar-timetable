@@ -14,7 +14,11 @@
 TOAST UI Calendar 설치
 =====================
 
-TOAST UI Calendar는 `npm <https://www.npmjs.com/package/tui-calendar>`_ 으로 제공됩니다. 아래와 같이 프로젝트 폴더로 이동한 후 패키지와 TOAST UI Calendar를 설치합니다.
+TOAST UI Calendar는 |link_2| 으로 제공됩니다. 아래와 같이 프로젝트 폴더로 이동한 후 패키지와 TOAST UI Calendar를 설치합니다.
+
+.. |link_2| raw:: html
+
+  <a href="https://www.npmjs.com/package/tui-calendar" target="_blank">npm</a>
 
 .. code-block:: shell
 
@@ -65,11 +69,23 @@ HTML 초기 코드 작성
 개발 서버 실행
 =====================
 
-번들러는 `Webpack <https://webpack.js.org/>`_ 을 사용하고 `webpack-dev-server <https://github.com/webpack/webpack-dev-server>`_ 를 사용하여 개발 서버를 설정해 두었습니다. 아래와 같이 간단한 명령어를 사용하여 서버를 실행합니다.
+번들러는 |link_3| 을 사용하고 |link_4| 를 사용하여 개발 서버를 설정해 두었습니다. 아래와 같이 간단한 명령어를 사용하여 서버를 실행합니다.
+
+.. |link_3| raw:: html
+
+  <a href="https://webpack.js.org" target="_blank">Webpack</a>
+
+.. |link_4| raw:: html
+
+  <a href="https://github.com/webpack/webpack-dev-server" target="_blank">webpack-dev-server</a>
 
 .. code-block:: shell
 
   npm run serve
 
 
-브라우저를 열어 http://localhost:8080 에 접속하여 TOAST UI Calendar의 기본 모습을 확인해 봅시다.
+브라우저를 열어 |link_5| 에 접속하여 TOAST UI Calendar의 기본 모습을 확인해 봅시다.
+
+.. |link_5| raw:: html
+
+  <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>
