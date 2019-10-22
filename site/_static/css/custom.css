@@ -33,3 +33,7 @@ body,h1,h2,h3,h4,h5,h6,input,select,textarea,button,legend,.rst-content .toctree
     url('../font/noto-sans-kr-v12-korean_latin-700.woff2') format('woff2'), /* Super Modern Browsers */
     url('../font/noto-sans-kr-v12-korean_latin-700.woff') format('woff'), /* Modern Browsers */
 }
+
+.wy-side-nav-search .icon-home {
+  width: 200px;
+}
