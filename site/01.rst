@@ -1,0 +1,27 @@
+****
+개요
+****
+
+TOAST UI Calendar는 FE개발랩에서 개발한 오픈소스 자바스크립트 라이브러리입니다. TOAST UI Calendar를 사용하면 일정, 업무, 마일스톤 등 시간에 따른 일정 데이터를 UI로 표현할 수 있으며, 일간 뷰, 주간 뷰, 월간 뷰 등 다양한 달력 보기를 지원합니다.
+이번 핸즈온 랩스에서 TOAST UI Calendar를 경험해보고 서비스에 직접 적용해 보세요!
+
+
+학습할 내용
+============
+
+* TOAST UI Calendar를 사용한 수업 시간표 만들기
+
+준비물
+======
+
+* 익숙한 편집기
+* node.js
+* 브라우저
+
+소스 코드
+==========
+* |link_1|
+
+.. |link_1| raw:: html
+
+  <a href="https://github.com/nhn/hands-on-labs.toastui.calendar-timetable" target="_blank">Github</a>

@@ -1,0 +1,52 @@
+############################################
+TOAST UI Calendar 설치 및 서버 실행하기
+############################################
+
+프로젝트 설치
+==========================================
+
+터미널을 열어 미리 준비된 프로젝트를 클론 받습니다.
+
+.. code-block:: shell
+
+  git clone https://github.com/nhn/hands-on-labs.toastui.calendar-timetable.git
+
+TOAST UI Calendar 설치
+==========================================
+
+TOAST UI Calendar는 |npm| 으로 제공됩니다. 아래와 같이 프로젝트 폴더로 이동한 후 패키지와 TOAST UI Calendar를 설치합니다.
+
+.. |npm| raw:: html
+
+  <a href="https://www.npmjs.com" target="_blank">npm</a>
+
+.. code-block:: shell
+
+  cd hands-on-labs.toastui.calendar-timetable
+  npm install
+  npm install tui-calendar
+
+
+
+개발 서버 실행
+==============================
+
+번들러는 |Webpack| 을 사용하고 |devServer| 를 사용하여 개발 서버를 설정해 두었습니다.
+아래와 같이 간단히 개발 서버를 실행하고 브라우저로 |localhost| 에 접속합니다.
+앞으로 실습하는 모든 결과는 이 개발 서버에서 확인합니다.
+
+.. |Webpack| raw:: html
+
+  <a href="https://webpack.js.org" target="_blank">Webpack</a>
+
+.. |devServer| raw:: html
+
+  <a href="https://github.com/webpack/webpack-dev-server" target="_blank">webpack-dev-server</a>
+
+.. |localhost| raw:: html
+
+  <a href="http://localhost:8080" target="_blank">http://localhost:8080</a>
+
+.. code-block:: shell
+
+  npm run serve

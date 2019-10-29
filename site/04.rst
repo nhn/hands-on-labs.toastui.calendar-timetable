@@ -1,0 +1,222 @@
+######################################
+2학기 수업 시간표 만들기
+######################################
+
+지금부터 TOAST UI Calendar를 사용하여 수업 시간표를 만들어 보겠습니다.
+
+캘린더 등록하기
+================================================================
+캘린더는 일정의 집합입니다. 캘린더를 미리 등록하여 일정을 구분할 수 있습니다.
+캘린더의 ``id`` 값은 일정을 생성할 때 ``calendarId`` 값과 같아야 합니다.
+
+튜토리얼에서는 전공 필수, 전공 선택, 일반교양 별로 캘린더를 구분하겠습니다.
+
+.. code-block:: js
+
+  ...
+  calendar.setCalendars([
+    {
+      id: 'Major Subject',
+      name: '전공 필수',
+      color: '#ffffff',
+      bgColor: '#ff5583',
+      dragBgColor: '#ff5583',
+      borderColor: '#ff5583'
+    },
+    {
+      id: 'Elective Subject',
+      name: '전공 선택',
+      color: '#ffffff',
+      bgColor: '#ffbb3b',
+      dragBgColor: '#ffbb3b',
+      borderColor: '#ffbb3b'
+    },
+    {
+      id: 'General Subject',
+      name: '일반 교양',
+      color: '#ffffff',
+      bgColor: '#03bd9e',
+      dragBgColor: '#03bd9e',
+      borderColor: '#03bd9e'
+    }
+  ]);
+
+자, 이제 캘린더에 일정을 추가해 볼까요? ``createSchedules`` API를 사용하여 직접 일정을 추가해 봅시다.
+
+일반 일정 등록하기
+==========================================
+
+일반 일정은 수업, 회의와 같이 시작 시간과 종료 시간을 갖는 일정입니다.
+일정 생성 시 일정 객체의 ``category`` 를 ``'time'`` 으로 지정하면 일반 일정이 됩니다.
+일정 객체의 자세한 프로퍼티 정보는 다음 문서 |scheduleProps| 를 참고하세요.
+
+.. |scheduleProps| raw:: html
+
+  <a href="https://nhn.github.io/tui.calendar/latest/Schedule" target="_blank">일정 객체</a>
+
+* 일정 객체 기본 옵션 정보
+    * ``id`` : 일정 ID
+    * ``calendarId`` : 캘린더 ID
+    * ``title`` : 일정 제목
+    * ``category`` : 일정 종류 (``'time'``, ``'allday'``, ``'milestone'``, ``'task'``)
+    * ``start`` : 시작 시간
+    * ``end`` : 종료 시간
+
+아래 코드를 예제 파일에 작성합니다. 소스를 작성하고 저장 후 브라우저에서 확인해 볼까요?
+
+.. code-block:: js
+
+  ...
+  calendar.createSchedules([
+    {
+      id: '1',
+      calendarId: 'Major Subject',
+      title: '자료구조론',
+      category: 'time',              // 일반 일정
+      start: '2019-11-27T10:00:00',
+      end: '2019-11-27T11:00:00'
+    },
+    {
+      id: '2',
+      calendarId: 'Elective Subject',
+      title: '웹 프로그래밍',
+      category: 'time',
+      start: '2019-11-27T14:00:00',
+      end: '2019-11-27T15:00:00'
+    },
+    {
+      id: '3',
+      calendarId: 'General Subject',
+      title: '영양과 건강',
+      category: 'time',
+      start: '2019-11-27T13:00:00',
+      end: '2019-11-27T14:00:00'
+    }
+  ]);
+
+일정이 잘 표시된 것을 확인했다면, 월~금까지 수업 일정을 자유롭게 입력해 보세요.
+
+.. code-block:: js
+
+  // 예제로 제공하는 일정 데이터 입니다.
+  calendar.createSchedules([
+    {
+      id: '3',
+      calendarId: 'Elective Subject',
+      title: '인공지능',
+      category: 'time',
+      start: '2019-11-25T09:00:00',
+      end: '2019-11-25T10:00:00'
+    },
+    {
+      id: '4',
+      calendarId: 'Major Subject',
+      title: '소프트웨어 공학',
+      category: 'time',
+      dueDateClass: '',
+      start: '2019-11-26T09:00:00',
+      end: '2019-11-26T10:30:00'
+    },
+        {
+      id: '5',
+      calendarId: 'Elective Subject',
+      title: '데이터베이스',
+      category: 'time',
+      start: '2019-11-26T10:30:00',
+      end: '2019-11-26T12:00:00'
+    },
+    {
+      id: '6',
+      calendarId: 'Major Subject',
+      title: '알고리즘',
+      category: 'time',
+      dueDateClass: '',
+      start: '2019-11-28T13:00:00',
+      end: '2019-11-28T14:30:00'
+    }
+  ]);
+
+종일 일정 등록하기
+===========================================
+
+종일 일정은 생일, 여행과 같이 시작/종료 시간 없이 날짜 자체에 의미가 있는 일정입니다.
+일정 객체의 ``category`` 에 ``'allday'`` 를 지정하면 종일 일정이 됩니다.
+``start`` 와 ``end`` 를 여러 날에 걸쳐 생성해도 종일 일정을 만들 수 있습니다.
+
+특별히 이 일정만 색상을 다르게 지정해 볼까요? 일정 프로퍼티에서 바로 색상을 지정할 수 있습니다.
+
+.. code-block:: js
+
+  ...
+  calendar.createSchedules([
+    {
+      id: '8',
+      calendarId: 'Travel',
+      title: '강촌 OT',
+      category: 'allday',              // 종일 일정
+      start: '2019-11-29',
+      end: '2019-11-30',
+      color: '#ffffff',                // 일정 색상을 직접 지정할 수 있어요
+      bgColor: '#ff4040',
+      dragBgColor: '#ff4040',
+      borderColor: '#ff4040'
+    }
+  ]);
+
+태스크 등록하기
+======================================
+
+태스크는 과제 제출과 같은 Todo 개념의 일정입니다. ``category`` 에 ``'task'`` 를 지정하면 태스크 일정 됩니다.
+태스크 일정은 일간 뷰, 주간 뷰에서는 상단의 Task 패널에 따로 표시됩니다. 업무 일정도 다른 색상으로 표시해 보겠습니다.
+
+.. code-block:: js
+
+  ...
+  calendar.createSchedules([
+    {
+      id: '9',
+      calendarId: 'Major Subject',
+      title: '소프트웨어 개론 레포트 제출',
+      category: 'task',                 // 태스크
+      start: '2019-11-28T10:30:00',
+      end: '2019-11-28T11:30:00',
+      color: '#ffffff',
+      bgColor: '#9e5fff',
+      dragBgColor: '#9e5fff',
+      borderColor: '#9e5fff'
+    }
+  ]);
+
+
+마일스톤 등록하기
+===============================================================
+
+마일스톤은 프로젝트 시한, 시험과 같은 기한의 의미를 갖는 일정입니다. ``category`` 에 ``'milestone'`` 를 지정하면 마일스톤 일정입니다.
+마일스톤 일정도 다른 색상으로 표시해 보겠습니다.
+
+.. code-block:: js
+
+  ...
+  calendar.createSchedules([
+    {
+      id: '10',
+      calendarId: 'Test',
+      title: '쪽지 시험',
+      category: 'milestone',              // 마일스톤
+      start: '2019-11-29T11:30:00',
+      end: '2019-11-29T12:00:00',
+      color: '#bbdc00',
+      bgColor: '#ffffff',
+      dragBgColor: '#ffffff',
+      borderColor: '#ffffff'
+    }
+  ]);
+
+이제 여러분은 캘린더에 새 일정을 추가하고 색깔도 지정할 수 있습니다.
+
+
+결과 화면
+==============================
+
+.. image:: _static/images/step04.png
+

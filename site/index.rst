@@ -1,5 +1,5 @@
 ****************************************
-Create Timetables with TOAST UI Calendar
+TOAST UI Calendar로 수업 시간표 만들기
 ****************************************
 
 * 카테고리: API
@@ -12,9 +12,10 @@ Create Timetables with TOAST UI Calendar
    :maxdepth: 1
    :numbered:
 
-   01 overview
-   02 setup
-   03 time-table
-   04 types
-   05 events
+   01
+   02
+   03
+   04
+   05
+   06
    wrap-up

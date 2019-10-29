@@ -1,7 +1,7 @@
 {
   "name": "hands-on-labs.toastui.calendar-timetable",
   "version": "1.0.1",
-  "description": "NHN Forward 2018",
+  "description": "NHN Forward 2019",
   "main": "./index.js",
   "scripts": {
     "serve": "webpack-dev-server"
@@ -19,7 +19,7 @@
     "labs",
     "tui-calendar"
   ],
-  "author": ["dongsik-yoo", "jungeun-cho"],
+  "author": "jungeun-cho",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/nhn/hands-on-labs.toastui.calendar-timetable/issues"
