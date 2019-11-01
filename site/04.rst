@@ -156,8 +156,8 @@
       category: 'allday',              // 종일 일정
       start: '2019-11-29',
       end: '2019-11-30',
-      color: '#ffffff',                // 일정 색상을 직접 지정할 수 있어요
-      bgColor: '#ff4040',
+      color: '#ffffff',
+      bgColor: '#ff4040',              // 일정 색상을 직접 지정할 수 있어요
       dragBgColor: '#ff4040',
       borderColor: '#ff4040'
     }

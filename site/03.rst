@@ -28,7 +28,7 @@ HTML 초기 코드 작성
     * 첫번째 파라미터 - 캘린더가 생성되는 컨테이너 엘리먼트 지정
         * 예) ``document.getElementById('calendar')``, ``'#calendar'``
     * 두번째 파라미터 - 캘린더 옵션 정보
-        * ``defaultView`` : 달력의 보기 형태 지정 (``'month'``, ``'week'``, ``'day'``)
+        * ``defaultView`` : 캘린더 초기 뷰 타입 지정 (``'month'``, ``'week'``, ``'day'``)
 
 * 더 많은 옵션 보기 : |link|
 
@@ -67,7 +67,7 @@ HTML 초기 코드 작성
 
 .. |5장| raw:: html
 
-  <a href="./05.html" target="_blank">5장. 다양하게 캘린더 보기</a>
+  <a href="./05.html" target="_blank">5장. 캘린더 설정하기</a>
 
 .. code-block:: javascript
 
@@ -76,11 +76,11 @@ HTML 초기 코드 작성
   /* 이동 및 뷰 타입 버튼 이벤트 핸들러 */
   ...
   nextBtn.addEventListener('click', () => {
-    calendar.next();                          // 현재 보기 기준으로 다음 뷰로 이동
+    calendar.next();                          // 현재 뷰 기준으로 다음 뷰로 이동
   });
 
   prevBtn.addEventListener('click', () => {
-    calendar.prev();                          // 현재 보기 기준으로 이전 뷰로 이동
+    calendar.prev();                          // 현재 뷰 기준으로 이전 뷰로 이동
   });
 
   dayViewBtn.addEventListener('click', () => {
