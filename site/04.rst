@@ -175,7 +175,7 @@
   calendar.createSchedules([
     {
       id: '9',
-      calendarId: 'Major Subject',
+      calendarId: 'Homework',
       title: '소프트웨어 개론 레포트 제출',
       category: 'task',                 // 태스크
       start: '2019-11-28T10:30:00',

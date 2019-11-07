@@ -82,10 +82,10 @@ TOAST UI Calendar는 사용자가 쉽게 일정을 생성/편집/삭제할 수 �
 .. code-block:: js
 
   ...
-  calendar.on('beforeUpdateSchedule', scheduleData => {
-    const {schedule} = scheduleData;
+  calendar.on('beforeUpdateSchedule', event => {
+    const {schedule, changes} = event;
 
-    calendar.updateSchedule(schedule.id, schedule.calendarId, schedule);
+    calendar.updateSchedule(schedule.id, schedule.calendarId, changes);
   });
 
 방금 새로 만들었던 일정을 클릭하고 Edit 버튼을 누른다음 내용을 변경하여 Update 버튼을 누릅니다.
