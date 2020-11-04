@@ -39,5 +39,5 @@ body,h1,h2,h3,h4,h5,h6,input,select,textarea,button,legend,.rst-content .toctree
 }
 
 .rst-content img {
-  border: 1px #cccccc solid;
+  border: 1px solid #e1e4e5;
 }
