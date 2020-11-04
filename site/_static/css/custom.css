@@ -37,3 +37,7 @@ body,h1,h2,h3,h4,h5,h6,input,select,textarea,button,legend,.rst-content .toctree
 .wy-side-nav-search .icon-home {
   width: 180px;
 }
+
+.rst-content img {
+  border: 1px #cccccc solid;
+}
