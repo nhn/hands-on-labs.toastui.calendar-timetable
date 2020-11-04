@@ -172,10 +172,11 @@
 </dl>
 </li>
 </ul>
+<p><code class="docutils literal notranslate"><span class="pre">defaultView</span></code> 를 <code class="docutils literal notranslate"><span class="pre">'week'</span></code> 으로 변경하고 <code class="docutils literal notranslate"><span class="pre">useCreationPopup</span></code>, <code class="docutils literal notranslate"><span class="pre">useCreationPopup</span></code> 속성을 추가해 주세요.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
-<span class="c1">// 기존에 있는 options에 그대로 덮어써주세요.</span>
 <span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
   <span class="nx">defaultView</span><span class="o">:</span> <span class="s1">&#39;week&#39;</span><span class="p">,</span>
+  <span class="p">...</span>
   <span class="nx">useCreationPopup</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="nx">useDetailPopup</span><span class="o">:</span> <span class="kc">true</span>
 <span class="p">};</span>
@@ -188,7 +189,7 @@
 <ul class="simple">
 <li><dl class="simple">
 <dt>이벤트 이름 - <code class="docutils literal notranslate"><span class="pre">beforeCreateSchedule</span></code></dt><dd><ul>
-<li><p>팝업에서 Save 버튼을 클릭하면 입력된 일정 정보를 넘겨주는 이벤트 훅</p></li>
+<li><p>팝업에서 [Save] 버튼을 클릭하면 입력된 일정 정보를 넘겨주는 이벤트 훅</p></li>
 <li><p>콜백 함수 내에서 필요에 따라 서버에 일정을 저장할 수 있으며, <code class="docutils literal notranslate"><span class="pre">createSchedules()</span></code> 를 호출하여 화면에 일정을 표시</p></li>
 </ul>
 </dd>
@@ -216,17 +217,17 @@
 </div>
 <p>캘린더의 빈 곳에 마우스를 클릭하거나 드래깅하면 새 일정을 작성할 수 있는 팝업이 나타납니다.</p>
 <img alt="_images/step06-2-1.png" src="_images/step06-2-1.png" />
-<p>팝업의 항목을 입력 후 Save 버튼을 클릭하면 만들어진 새 일정이 표시되며 일정을 클릭하면 입력한 내용도 잘 보입니다.</p>
+<p>팝업의 항목을 입력 후 [Save] 버튼을 클릭하면 만들어진 새 일정이 표시되며 일정을 클릭하면 입력한 내용도 잘 보입니다.</p>
 <img alt="_images/step06-2-2.png" src="_images/step06-2-2.png" />
 </div>
 <div class="section" id="id3">
 <h2>6.3. 일정 편집하기<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
-<p>일정을 클릭하고 Edit 버튼을 누르면 일정 편집 팝업이 나타납니다.
+<p>일정을 클릭하고 [Edit] 버튼을 누르면 일정 편집 팝업이 나타납니다.
 편집된 일정을 저장하기 위한 이벤트 핸들러를 등록해 봅시다.</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt>이벤트 이름 - <code class="docutils literal notranslate"><span class="pre">beforeUpdateSchedule</span></code></dt><dd><ul>
-<li><p>편집 팝업에서 편집 후 Save 버튼을 눌렀을 때, 혹은 일정을 마우스로 드래그하여 날짜를 변경하는 경우 변경된 일정 정보를 넘겨주는 이벤트 훅</p></li>
+<li><p>편집 팝업에서 편집 후 [Save] 버튼을 클릭했을 때, 혹은 일정을 마우스로 드래그하여 날짜를 변경하는 경우 변경된 일정 정보를 넘겨주는 이벤트 훅</p></li>
 <li><p>필요한 경우 서버에 일정을 갱신하는 로직을 처리할 수 있으며, <code class="docutils literal notranslate"><span class="pre">updateSchedule()</span></code> 함수를 호출하여 화면에 보이는 일정을 갱신</p></li>
 </ul>
 </dd>
@@ -241,7 +242,7 @@
 <span class="p">});</span>
 </pre></div>
 </div>
-<p>방금 새로 만들었던 일정을 클릭하고 Edit 버튼을 누른다음 내용을 변경하여 Update 버튼을 누릅니다.</p>
+<p>방금 새로 만들었던 일정을 클릭하고 [Edit] 버튼을 누른다음 내용을 변경하여 [Update] 버튼을 누릅니다.</p>
 <img alt="_images/step06-3-1.png" src="_images/step06-3-1.png" />
 <p>일정이 정상적으로 변경되었습니다.</p>
 <img alt="_images/step06-3-2.png" src="_images/step06-3-2.png" />
@@ -252,7 +253,7 @@
 <ul class="simple">
 <li><dl class="simple">
 <dt>이벤트 이름 - <code class="docutils literal notranslate"><span class="pre">beforeDeleteSchedule</span></code></dt><dd><ul>
-<li><p>일정을 클릭하고 Delete 버튼을 누르면 발생하는 이벤트 훅</p></li>
+<li><p>일정을 클릭하고 [Delete] 버튼을 누르면 발생하는 이벤트 훅</p></li>
 <li><p>필요한 경우 서버에 일정을 삭제하는 로직을 추가하고, <code class="docutils literal notranslate"><span class="pre">deleteSchedule()</span></code> 을 함수를 호출하여 화면에서 일정을 삭제</p></li>
 </ul>
 </dd>

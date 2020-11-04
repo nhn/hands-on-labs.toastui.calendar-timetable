@@ -158,26 +158,27 @@
 <h1>3. 캘린더 생성하기<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
 <div class="section" id="html">
 <h2>3.1. HTML 초기 코드 작성<a class="headerlink" href="#html" title="제목 주소">¶</a></h2>
-<p>준비된 <code class="docutils literal notranslate"><span class="pre">src/index.html</span></code> 파일을 열어 <code class="docutils literal notranslate"><span class="pre">body</span></code> 태그 내부에 컨테이너 태그를 작성해 줍니다.</p>
+<p>준비된 <code class="docutils literal notranslate"><span class="pre">src/index.html</span></code> 파일을 열어 <code class="docutils literal notranslate"><span class="pre">body</span></code> 태그 내부에 컨테이너 요소를 작성해 줍니다.</p>
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span>// src/index.html
 
 <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
   ...
+  <span class="c">&lt;!-- 캘린더 컨테이너 요소 작성 --&gt;</span>
   <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;calendar&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;height: 600px;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-  ...
 <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="id2">
 <h2>3.2. 자바스크립트 초기 코드 작성<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
-<p>1. 인스턴스를 생성해봅니다. 이 때 반드시 기본 옵션을 파라미터로 넘겨주어야 합니다.
-<code class="docutils literal notranslate"><span class="pre">src/index.js</span></code> 파일을 열고 다음 코드를 추가해봅니다.</p>
+<ol class="arabic simple">
+<li><p>인스턴스를 생성해봅니다. 이 때 반드시 기본 옵션을 파라미터로 넘겨주어야 합니다.</p></li>
+</ol>
 <ul class="simple">
 <li><dl class="simple">
 <dt>인스턴스 생성 시 넘겨주는 파라미터</dt><dd><ul>
 <li><dl class="simple">
-<dt>첫번째 파라미터 - 캘린더가 생성되는 컨테이너 엘리먼트 지정</dt><dd><ul>
+<dt>첫번째 파라미터 - 캘린더가 생성되는 컨테이너 요소 지정</dt><dd><ul>
 <li><p>예) <code class="docutils literal notranslate"><span class="pre">document.getElementById('calendar')</span></code>, <code class="docutils literal notranslate"><span class="pre">'#calendar'</span></code></p></li>
 </ul>
 </dd>
@@ -196,8 +197,8 @@
 </li>
 <li><p>더 많은 옵션 보기 : <a href="https://nhn.github.io/tui.calendar/latest/Options" target="_blank">링크</a></p></li>
 </ul>
-<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
-
+<p><code class="docutils literal notranslate"><span class="pre">src/index.js</span></code> 파일을 열고 다음 코드를 추가해봅니다.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// 캘린더를 생성하기 위해 tui-calendar 객체와 스타일 코드 삽입</span>
 <span class="kr">import</span> <span class="nx">Calendar</span> <span class="nx">from</span> <span class="s1">&#39;tui-calendar&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="s1">&#39;tui-calendar/dist/tui-calendar.css&#39;</span><span class="p">;</span>
 <span class="kr">import</span> <span class="s1">&#39;tui-date-picker/dist/tui-date-picker.css&#39;</span><span class="p">;</span>
@@ -205,10 +206,14 @@
 
 <span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
 <span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
-  <span class="nx">defaultView</span><span class="o">:</span> <span class="s1">&#39;week&#39;</span>      <span class="c1">// 캘린더가 초기에 그려지는 뷰 타입을 주간뷰로 지정</span>
+  <span class="nx">defaultView</span><span class="o">:</span> <span class="s1">&#39;week&#39;</span><span class="p">,</span>          <span class="c1">// 캘린더가 초기에 그려지는 뷰 타입을 주간 뷰로 지정</span>
+  <span class="nx">week</span><span class="o">:</span> <span class="p">{</span>                       <span class="c1">// 주간 뷰 시간 지정</span>
+    <span class="nx">hourStart</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="nx">hourEnd</span><span class="o">:</span> <span class="mi">18</span>
+  <span class="p">}</span>
 <span class="p">};</span>
 
-<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="nx">container</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span> <span class="c1">// 캘린더 인스턴스 생성</span>
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="nx">container</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span>  <span class="c1">// 캘린더 인스턴스 생성</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="2">
@@ -247,6 +252,10 @@
 </div>
 <p>3. 개발 서버에 접속한 브라우저에서 캘린더가 생성되었는지 확인합니다.
 코드를 수정하면 브라우저는 자동으로 리프레시됩니다.</p>
+<p>(예제에서는 임의의 날짜를 지정하였습니다. 만약 지정하지 않는다면 오늘 날짜 기준으로 보입니다.)</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="nx">calendar</span><span class="p">.</span><span class="nx">setDate</span><span class="p">(</span><span class="s1">&#39;2020-11-16&#39;</span><span class="p">);</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="id3">
 <h2>3.3. 결과 화면<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>

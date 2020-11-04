@@ -189,16 +189,19 @@
 </div>
 <div class="section" id="id4">
 <h2>5.3. 주말 제외 설정하기<a class="headerlink" href="#id4" title="제목 주소">¶</a></h2>
-<p><code class="docutils literal notranslate"><span class="pre">workweek</span></code> 속성은 주말 표시 여부를 설정합니다. 일간/주간/월간 뷰에서 지원되는 기능입니다. 기본값이 <code class="docutils literal notranslate"><span class="pre">false</span></code> 입니다.</p>
+<p><code class="docutils literal notranslate"><span class="pre">workweek</span></code> 속성은 주말 표시 여부를 설정합니다. 일간/주간/월간 뷰에서 지원되는 기능입니다.
+<code class="docutils literal notranslate"><span class="pre">workweek</span></code> 을 <code class="docutils literal notranslate"><span class="pre">true</span></code> 로 설정하면 주말을 제외한 주 5일만 표시됩니다. 기본값이 <code class="docutils literal notranslate"><span class="pre">false</span></code> 입니다.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
 <span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="nx">container</span><span class="p">,</span> <span class="p">{</span>
   <span class="p">...</span>
-  <span class="nx">month</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">workweek</span><span class="o">:</span> <span class="kc">true</span>
+  <span class="nx">month</span><span class="o">:</span> <span class="p">{</span>                        <span class="c1">// 월간 뷰 옵션 설정</span>
+    <span class="nx">workweek</span><span class="o">:</span> <span class="kc">true</span>                <span class="c1">// 주말 표시 여부</span>
   <span class="p">},</span>
-  <span class="nx">week</span><span class="o">:</span> <span class="p">{</span>
-    <span class="nx">workweek</span><span class="o">:</span> <span class="kc">true</span>
-  <span class="p">}</span>
+  <span class="nx">week</span><span class="o">:</span> <span class="p">{</span>                         <span class="c1">// 주간 뷰 옵션 설정</span>
+    <span class="nx">hourStart</span><span class="o">:</span> <span class="mi">7</span><span class="p">,</span>
+    <span class="nx">hourEnd</span><span class="o">:</span> <span class="mi">18</span><span class="p">,</span>
+    <span class="nx">workweek</span><span class="o">:</span> <span class="kc">true</span>                <span class="c1">// 주말 표시 여부</span>
+  <span class="p">},</span>
   <span class="p">...</span>
 <span class="p">});</span>
 </pre></div>
@@ -214,8 +217,9 @@
   <span class="p">...</span>
   <span class="nx">defaultView</span><span class="o">:</span> <span class="s1">&#39;month&#39;</span><span class="p">,</span>
   <span class="nx">month</span><span class="o">:</span> <span class="p">{</span>                        <span class="c1">// 월간 뷰 옵션 설정</span>
+    <span class="nx">workweek</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nx">visibleWeeksCount</span><span class="o">:</span> <span class="mi">2</span>          <span class="c1">// 2~6까지 설정 가능</span>
-  <span class="p">}</span>
+  <span class="p">},</span>
   <span class="p">...</span>
 <span class="p">});</span>
 </pre></div>

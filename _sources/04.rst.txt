@@ -48,11 +48,11 @@
 
 일반 일정은 수업, 회의와 같이 시작 시간과 종료 시간을 갖는 일정입니다.
 일정 생성 시 일정 객체의 ``category`` 를 ``'time'`` 으로 지정하면 일반 일정이 됩니다.
-일정 객체의 자세한 프로퍼티 정보는 다음 문서 |scheduleProps| 를 참고하세요.
+일정 객체의 자세한 프로퍼티 정보는 |scheduleProps| 를 참고하세요.
 
 .. |scheduleProps| raw:: html
 
-  <a href="https://nhn.github.io/tui.calendar/latest/Schedule" target="_blank">일정 객체</a>
+  <a href="https://nhn.github.io/tui.calendar/latest/Schedule" target="_blank">일정 객체 링크</a>
 
 * 일정 객체 기본 옵션 정보
     * ``id`` : 일정 ID
@@ -73,24 +73,24 @@
       calendarId: 'Major Subject',
       title: '자료구조론',
       category: 'time',              // 일반 일정
-      start: '2019-11-27T10:00:00',
-      end: '2019-11-27T11:00:00'
+      start: '2020-11-18T10:00:00',
+      end: '2020-11-18T11:00:00'
     },
     {
       id: '2',
       calendarId: 'Elective Subject',
       title: '웹 프로그래밍',
       category: 'time',
-      start: '2019-11-27T14:00:00',
-      end: '2019-11-27T15:00:00'
+      start: '2020-11-18T14:00:00',
+      end: '2020-11-18T15:00:00'
     },
     {
       id: '3',
       calendarId: 'General Subject',
       title: '영양과 건강',
       category: 'time',
-      start: '2019-11-27T13:00:00',
-      end: '2019-11-27T14:00:00'
+      start: '2020-11-18T13:00:00',
+      end: '2020-11-18T14:00:00'
     }
   ]);
 
@@ -105,8 +105,8 @@
       calendarId: 'Elective Subject',
       title: '인공지능',
       category: 'time',
-      start: '2019-11-25T09:00:00',
-      end: '2019-11-25T10:00:00'
+      start: '2020-11-16T09:00:00',
+      end: '2020-11-16T10:00:00'
     },
     {
       id: '4',
@@ -114,16 +114,16 @@
       title: '소프트웨어 공학',
       category: 'time',
       dueDateClass: '',
-      start: '2019-11-26T09:00:00',
-      end: '2019-11-26T10:30:00'
+      start: '2020-11-17T09:00:00',
+      end: '2020-11-17T10:30:00'
     },
         {
       id: '5',
       calendarId: 'Elective Subject',
       title: '데이터베이스',
       category: 'time',
-      start: '2019-11-26T10:30:00',
-      end: '2019-11-26T12:00:00'
+      start: '2020-11-17T10:30:00',
+      end: '2020-11-17T12:00:00'
     },
     {
       id: '6',
@@ -131,8 +131,8 @@
       title: '알고리즘',
       category: 'time',
       dueDateClass: '',
-      start: '2019-11-28T13:00:00',
-      end: '2019-11-28T14:30:00'
+      start: '2020-11-19T13:00:00',
+      end: '2020-11-19T14:30:00'
     }
   ]);
 
@@ -154,8 +154,8 @@
       calendarId: 'Travel',
       title: '강촌 OT',
       category: 'allday',              // 종일 일정
-      start: '2019-11-29',
-      end: '2019-11-30',
+      start: '2020-11-20',
+      end: '2020-11-21',
       color: '#ffffff',
       bgColor: '#ff4040',              // 일정 색상을 직접 지정할 수 있어요
       dragBgColor: '#ff4040',
@@ -178,8 +178,8 @@
       calendarId: 'Homework',
       title: '소프트웨어 개론 레포트 제출',
       category: 'task',                 // 태스크
-      start: '2019-11-28T10:30:00',
-      end: '2019-11-28T11:30:00',
+      start: '2020-11-19T10:30:00',
+      end: '2020-11-19T11:30:00',
       color: '#ffffff',
       bgColor: '#9e5fff',
       dragBgColor: '#9e5fff',
@@ -203,8 +203,8 @@
       calendarId: 'Test',
       title: '쪽지 시험',
       category: 'milestone',              // 마일스톤
-      start: '2019-11-29T11:30:00',
-      end: '2019-11-29T12:00:00',
+      start: '2020-11-20T11:30:00',
+      end: '2020-11-20T12:00:00',
       color: '#bbdc00',
       bgColor: '#ffffff',
       dragBgColor: '#ffffff',

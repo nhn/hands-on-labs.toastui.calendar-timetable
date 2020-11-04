@@ -44,19 +44,22 @@ Milestone과 Task 영역이 사라지고 일정 정보만 노출되는 것을 �
 주말 제외 설정하기
 ==================================
 
-``workweek`` 속성은 주말 표시 여부를 설정합니다. 일간/주간/월간 뷰에서 지원되는 기능입니다. 기본값이 ``false`` 입니다.
+``workweek`` 속성은 주말 표시 여부를 설정합니다. 일간/주간/월간 뷰에서 지원되는 기능입니다.
+``workweek`` 을 ``true`` 로 설정하면 주말을 제외한 주 5일만 표시됩니다. 기본값이 ``false`` 입니다.
 
 .. code-block:: js
 
   ...
   const calendar = new Calendar(container, {
     ...
-    month: {
-      workweek: true
+    month: {                        // 월간 뷰 옵션 설정
+      workweek: true                // 주말 표시 여부
     },
-    week: {
-      workweek: true
-    }
+    week: {                         // 주간 뷰 옵션 설정
+      hourStart: 7,
+      hourEnd: 18,
+      workweek: true                // 주말 표시 여부
+    },
     ...
   });
 
@@ -76,8 +79,9 @@ Milestone과 Task 영역이 사라지고 일정 정보만 노출되는 것을 �
     ...
     defaultView: 'month',
     month: {                        // 월간 뷰 옵션 설정
+      workweek: true,
       visibleWeeksCount: 2          // 2~6까지 설정 가능
-    }
+    },
     ...
   });
 
