@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>4. 2학기 수업 시간표 만들기 &mdash; TOAST UI Calendar로 수업 시간표 만들기 1.0 문서</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="5. 캘린더 설정하기" href="05.html" />
+    <link rel="prev" title="3. 캘린더 생성하기" href="03.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TOAST UI Calendar로 수업 시간표 만들기
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01.html">1. 개요</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.html">2. TOAST UI Calendar 설치 및 서버 실행하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.html">3. 캘린더 생성하기</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">4. 2학기 수업 시간표 만들기</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#id2">4.1. 캘린더 등록하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">4.2. 일반 일정 등록하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id4">4.3. 종일 일정 등록하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id5">4.4. 태스크 등록하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id6">4.5. 마일스톤 등록하기</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id7">4.6. 결과 화면</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="05.html">5. 캘린더 설정하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06.html">6. 이벤트 핸들러 다루기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrap-up.html">7. 정리</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TOAST UI Calendar로 수업 시간표 만들기</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>4. 2학기 수업 시간표 만들기</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>4. 2학기 수업 시간표 만들기<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<p>지금부터 TOAST UI Calendar를 사용하여 수업 시간표를 만들어 보겠습니다.</p>
+<div class="section" id="id2">
+<h2>4.1. 캘린더 등록하기<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<p>캘린더는 일정의 집합입니다. 캘린더를 미리 등록하여 일정을 구분할 수 있습니다.
+캘린더의 <code class="docutils literal notranslate"><span class="pre">id</span></code> 값은 일정을 생성할 때 <code class="docutils literal notranslate"><span class="pre">calendarId</span></code> 값과 같아야 합니다.</p>
+<p>튜토리얼에서는 전공 필수, 전공 선택, 일반교양 별로 캘린더를 구분하겠습니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">setCalendars</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;Major Subject&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;전공 필수&#39;</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+    <span class="nx">bgColor</span><span class="o">:</span> <span class="s1">&#39;#ff5583&#39;</span><span class="p">,</span>
+    <span class="nx">dragBgColor</span><span class="o">:</span> <span class="s1">&#39;#ff5583&#39;</span><span class="p">,</span>
+    <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;#ff5583&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;Elective Subject&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;전공 선택&#39;</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+    <span class="nx">bgColor</span><span class="o">:</span> <span class="s1">&#39;#ffbb3b&#39;</span><span class="p">,</span>
+    <span class="nx">dragBgColor</span><span class="o">:</span> <span class="s1">&#39;#ffbb3b&#39;</span><span class="p">,</span>
+    <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;#ffbb3b&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;General Subject&#39;</span><span class="p">,</span>
+    <span class="nx">name</span><span class="o">:</span> <span class="s1">&#39;일반 교양&#39;</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+    <span class="nx">bgColor</span><span class="o">:</span> <span class="s1">&#39;#03bd9e&#39;</span><span class="p">,</span>
+    <span class="nx">dragBgColor</span><span class="o">:</span> <span class="s1">&#39;#03bd9e&#39;</span><span class="p">,</span>
+    <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;#03bd9e&#39;</span>
+  <span class="p">}</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+<p>자, 이제 캘린더에 일정을 추가해 볼까요? <code class="docutils literal notranslate"><span class="pre">createSchedules</span></code> API를 사용하여 직접 일정을 추가해 봅시다.</p>
+</div>
+<div class="section" id="id3">
+<h2>4.2. 일반 일정 등록하기<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
+<p>일반 일정은 수업, 회의와 같이 시작 시간과 종료 시간을 갖는 일정입니다.
+일정 생성 시 일정 객체의 <code class="docutils literal notranslate"><span class="pre">category</span></code> 를 <code class="docutils literal notranslate"><span class="pre">'time'</span></code> 으로 지정하면 일반 일정이 됩니다.
+일정 객체의 자세한 프로퍼티 정보는 다음 문서 <a href="https://nhn.github.io/tui.calendar/latest/Schedule" target="_blank">일정 객체</a> 를 참고하세요.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>일정 객체 기본 옵션 정보</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">id</span></code> : 일정 ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">calendarId</span></code> : 캘린더 ID</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code> : 일정 제목</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">category</span></code> : 일정 종류 (<code class="docutils literal notranslate"><span class="pre">'time'</span></code>, <code class="docutils literal notranslate"><span class="pre">'allday'</span></code>, <code class="docutils literal notranslate"><span class="pre">'milestone'</span></code>, <code class="docutils literal notranslate"><span class="pre">'task'</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">start</span></code> : 시작 시간</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">end</span></code> : 종료 시간</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>아래 코드를 예제 파일에 작성합니다. 소스를 작성하고 저장 후 브라우저에서 확인해 볼까요?</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">createSchedules</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;1&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Major Subject&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;자료구조론&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>              <span class="c1">// 일반 일정</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-27T10:00:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-27T11:00:00&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;2&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Elective Subject&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;웹 프로그래밍&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-27T14:00:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-27T15:00:00&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;General Subject&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;영양과 건강&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-27T13:00:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-27T14:00:00&#39;</span>
+  <span class="p">}</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+<p>일정이 잘 표시된 것을 확인했다면, 월~금까지 수업 일정을 자유롭게 입력해 보세요.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="c1">// 예제로 제공하는 일정 데이터 입니다.</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">createSchedules</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;3&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Elective Subject&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;인공지능&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-25T09:00:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-25T10:00:00&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;4&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Major Subject&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;소프트웨어 공학&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+    <span class="nx">dueDateClass</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-26T09:00:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-26T10:30:00&#39;</span>
+  <span class="p">},</span>
+      <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Elective Subject&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;데이터베이스&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-26T10:30:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-26T12:00:00&#39;</span>
+  <span class="p">},</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;6&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Major Subject&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;알고리즘&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;time&#39;</span><span class="p">,</span>
+    <span class="nx">dueDateClass</span><span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-28T13:00:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-28T14:30:00&#39;</span>
+  <span class="p">}</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id4">
+<h2>4.3. 종일 일정 등록하기<a class="headerlink" href="#id4" title="제목 주소">¶</a></h2>
+<p>종일 일정은 생일, 여행과 같이 시작/종료 시간 없이 날짜 자체에 의미가 있는 일정입니다.
+일정 객체의 <code class="docutils literal notranslate"><span class="pre">category</span></code> 에 <code class="docutils literal notranslate"><span class="pre">'allday'</span></code> 를 지정하면 종일 일정이 됩니다.
+<code class="docutils literal notranslate"><span class="pre">start</span></code> 와 <code class="docutils literal notranslate"><span class="pre">end</span></code> 를 여러 날에 걸쳐 생성해도 종일 일정을 만들 수 있습니다.</p>
+<p>특별히 이 일정만 색상을 다르게 지정해 볼까요? 일정 프로퍼티에서 바로 색상을 지정할 수 있습니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">createSchedules</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;8&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Travel&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;강촌 OT&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;allday&#39;</span><span class="p">,</span>              <span class="c1">// 종일 일정</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-29&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-30&#39;</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+    <span class="nx">bgColor</span><span class="o">:</span> <span class="s1">&#39;#ff4040&#39;</span><span class="p">,</span>              <span class="c1">// 일정 색상을 직접 지정할 수 있어요</span>
+    <span class="nx">dragBgColor</span><span class="o">:</span> <span class="s1">&#39;#ff4040&#39;</span><span class="p">,</span>
+    <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;#ff4040&#39;</span>
+  <span class="p">}</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id5">
+<h2>4.4. 태스크 등록하기<a class="headerlink" href="#id5" title="제목 주소">¶</a></h2>
+<p>태스크는 과제 제출과 같은 Todo 개념의 일정입니다. <code class="docutils literal notranslate"><span class="pre">category</span></code> 에 <code class="docutils literal notranslate"><span class="pre">'task'</span></code> 를 지정하면 태스크 일정 됩니다.
+태스크 일정은 일간 뷰, 주간 뷰에서는 상단의 Task 패널에 따로 표시됩니다. 업무 일정도 다른 색상으로 표시해 보겠습니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">createSchedules</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;9&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Homework&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;소프트웨어 개론 레포트 제출&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;task&#39;</span><span class="p">,</span>                 <span class="c1">// 태스크</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-28T10:30:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-28T11:30:00&#39;</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+    <span class="nx">bgColor</span><span class="o">:</span> <span class="s1">&#39;#9e5fff&#39;</span><span class="p">,</span>
+    <span class="nx">dragBgColor</span><span class="o">:</span> <span class="s1">&#39;#9e5fff&#39;</span><span class="p">,</span>
+    <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;#9e5fff&#39;</span>
+  <span class="p">}</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id6">
+<h2>4.5. 마일스톤 등록하기<a class="headerlink" href="#id6" title="제목 주소">¶</a></h2>
+<p>마일스톤은 프로젝트 시한, 시험과 같은 기한의 의미를 갖는 일정입니다. <code class="docutils literal notranslate"><span class="pre">category</span></code> 에 <code class="docutils literal notranslate"><span class="pre">'milestone'</span></code> 를 지정하면 마일스톤 일정입니다.
+마일스톤 일정도 다른 색상으로 표시해 보겠습니다.</p>
+<div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+<span class="nx">calendar</span><span class="p">.</span><span class="nx">createSchedules</span><span class="p">([</span>
+  <span class="p">{</span>
+    <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;10&#39;</span><span class="p">,</span>
+    <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Test&#39;</span><span class="p">,</span>
+    <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;쪽지 시험&#39;</span><span class="p">,</span>
+    <span class="nx">category</span><span class="o">:</span> <span class="s1">&#39;milestone&#39;</span><span class="p">,</span>              <span class="c1">// 마일스톤</span>
+    <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2019-11-29T11:30:00&#39;</span><span class="p">,</span>
+    <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2019-11-29T12:00:00&#39;</span><span class="p">,</span>
+    <span class="nx">color</span><span class="o">:</span> <span class="s1">&#39;#bbdc00&#39;</span><span class="p">,</span>
+    <span class="nx">bgColor</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+    <span class="nx">dragBgColor</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span><span class="p">,</span>
+    <span class="nx">borderColor</span><span class="o">:</span> <span class="s1">&#39;#ffffff&#39;</span>
+  <span class="p">}</span>
+<span class="p">]);</span>
+</pre></div>
+</div>
+<p>이제 여러분은 캘린더에 새 일정을 추가하고 색깔도 지정할 수 있습니다.</p>
+</div>
+<div class="section" id="id7">
+<h2>4.6. 결과 화면<a class="headerlink" href="#id7" title="제목 주소">¶</a></h2>
+<img alt="_images/step04.png" src="_images/step04.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="05.html" class="btn btn-neutral float-right" title="5. 캘린더 설정하기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="03.html" class="btn btn-neutral float-left" title="3. 캘린더 생성하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright NHN Corp. All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

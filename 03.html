@@ -1,0 +1,305 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="ko" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="ko" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>3. 캘린더 생성하기 &mdash; TOAST UI Calendar로 수업 시간표 만들기 1.0 문서</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+        <script type="text/javascript" src="_static/language_data.js"></script>
+        <script type="text/javascript" src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+    <link rel="index" title="색인" href="genindex.html" />
+    <link rel="search" title="검색" href="search.html" />
+    <link rel="next" title="4. 2학기 수업 시간표 만들기" href="04.html" />
+    <link rel="prev" title="2. TOAST UI Calendar 설치 및 서버 실행하기" href="02.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> TOAST UI Calendar로 수업 시간표 만들기
+          
+
+          
+          </a>
+
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01.html">1. 개요</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.html">2. TOAST UI Calendar 설치 및 서버 실행하기</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">3. 캘린더 생성하기</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#html">3.1. HTML 초기 코드 작성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id2">3.2. 자바스크립트 초기 코드 작성</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#id3">3.3. 결과 화면</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="04.html">4. 2학기 수업 시간표 만들기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05.html">5. 캘린더 설정하기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="06.html">6. 이벤트 핸들러 다루기</a></li>
+<li class="toctree-l1"><a class="reference internal" href="wrap-up.html">7. 정리</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">TOAST UI Calendar로 수업 시간표 만들기</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>3. 캘린더 생성하기</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="id1">
+<h1>3. 캘린더 생성하기<a class="headerlink" href="#id1" title="제목 주소">¶</a></h1>
+<div class="section" id="html">
+<h2>3.1. HTML 초기 코드 작성<a class="headerlink" href="#html" title="제목 주소">¶</a></h2>
+<p>준비된 <code class="docutils literal notranslate"><span class="pre">src/index.html</span></code> 파일을 열어 <code class="docutils literal notranslate"><span class="pre">body</span></code> 태그 내부에 컨테이너 태그를 작성해 줍니다.</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span>// src/index.html
+
+<span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  ...
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;calendar&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;height: 600px;&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  ...
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="id2">
+<h2>3.2. 자바스크립트 초기 코드 작성<a class="headerlink" href="#id2" title="제목 주소">¶</a></h2>
+<p>1. 인스턴스를 생성해봅니다. 이 때 반드시 기본 옵션을 파라미터로 넘겨주어야 합니다.
+<code class="docutils literal notranslate"><span class="pre">src/index.js</span></code> 파일을 열고 다음 코드를 추가해봅니다.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>인스턴스 생성 시 넘겨주는 파라미터</dt><dd><ul>
+<li><dl class="simple">
+<dt>첫번째 파라미터 - 캘린더가 생성되는 컨테이너 엘리먼트 지정</dt><dd><ul>
+<li><p>예) <code class="docutils literal notranslate"><span class="pre">document.getElementById('calendar')</span></code>, <code class="docutils literal notranslate"><span class="pre">'#calendar'</span></code></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>두번째 파라미터 - 캘린더 옵션 정보</dt><dd><ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">defaultView</span></code> : 캘린더 초기 뷰 타입 지정 (<code class="docutils literal notranslate"><span class="pre">'month'</span></code>, <code class="docutils literal notranslate"><span class="pre">'week'</span></code>, <code class="docutils literal notranslate"><span class="pre">'day'</span></code>)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>더 많은 옵션 보기 : <a href="https://nhn.github.io/tui.calendar/latest/Options" target="_blank">링크</a></p></li>
+</ul>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="c1">// src/index.js</span>
+
+<span class="kr">import</span> <span class="nx">Calendar</span> <span class="nx">from</span> <span class="s1">&#39;tui-calendar&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;tui-calendar/dist/tui-calendar.css&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;tui-date-picker/dist/tui-date-picker.css&#39;</span><span class="p">;</span>
+<span class="kr">import</span> <span class="s1">&#39;tui-time-picker/dist/tui-time-picker.css&#39;</span><span class="p">;</span>
+
+<span class="kr">const</span> <span class="nx">container</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;calendar&#39;</span><span class="p">);</span>
+<span class="kr">const</span> <span class="nx">options</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="nx">defaultView</span><span class="o">:</span> <span class="s1">&#39;week&#39;</span>      <span class="c1">// 캘린더가 초기에 그려지는 뷰 타입을 주간뷰로 지정</span>
+<span class="p">};</span>
+
+<span class="kr">const</span> <span class="nx">calendar</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Calendar</span><span class="p">(</span><span class="nx">container</span><span class="p">,</span> <span class="nx">options</span><span class="p">);</span> <span class="c1">// 캘린더 인스턴스 생성</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>인스턴스를 생성하는 코드 아래에 API를 호출하는 코드를 추가해봅니다.</p></li>
+</ol>
+<ul class="simple">
+<li><p>API 보기 : <a href="https://nhn.github.io/tui.calendar/latest/Calendar#changeView" target="_blank">링크</a></p></li>
+</ul>
+<p>이동 및 뷰 타입 변경 버튼의 이벤트 핸들러에 캘린더의 API를 호출해 보도록 하겠습니다.
+캘린더 인스턴스 생성 후 동적으로 캘린더의 뷰를 변경할 수 있어요.</p>
+<p>이번 장에서는 이벤트만 등록해 놓고, 자세한 내용은 <a href="./05.html" target="_blank">5장. 캘린더 설정하기</a> 에서 다룹니다.</p>
+<div class="highlight-javascript notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
+
+<span class="cm">/* 이동 및 뷰 타입 버튼 이벤트 핸들러 */</span>
+<span class="p">...</span>
+<span class="nx">nextBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">calendar</span><span class="p">.</span><span class="nx">next</span><span class="p">();</span>                          <span class="c1">// 현재 뷰 기준으로 다음 뷰로 이동</span>
+<span class="p">});</span>
+
+<span class="nx">prevBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">calendar</span><span class="p">.</span><span class="nx">prev</span><span class="p">();</span>                          <span class="c1">// 현재 뷰 기준으로 이전 뷰로 이동</span>
+<span class="p">});</span>
+
+<span class="nx">dayViewBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">calendar</span><span class="p">.</span><span class="nx">changeView</span><span class="p">(</span><span class="s1">&#39;day&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>         <span class="c1">// 일간 뷰 보기</span>
+<span class="p">});</span>
+
+<span class="nx">weekViewBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">calendar</span><span class="p">.</span><span class="nx">changeView</span><span class="p">(</span><span class="s1">&#39;week&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>        <span class="c1">// 주간 뷰 보기</span>
+<span class="p">});</span>
+
+<span class="nx">monthViewBtn</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="p">()</span> <span class="p">=&gt;</span> <span class="p">{</span>
+  <span class="nx">calendar</span><span class="p">.</span><span class="nx">changeView</span><span class="p">(</span><span class="s1">&#39;month&#39;</span><span class="p">,</span> <span class="kc">true</span><span class="p">);</span>       <span class="c1">// 월간 뷰 보기</span>
+<span class="p">});</span>
+</pre></div>
+</div>
+<p>3. 개발 서버에 접속한 브라우저에서 캘린더가 생성되었는지 확인합니다.
+코드를 수정하면 브라우저는 자동으로 리프레시됩니다.</p>
+</div>
+<div class="section" id="id3">
+<h2>3.3. 결과 화면<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
+<img alt="_images/step03.png" src="_images/step03.png" />
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="04.html" class="btn btn-neutral float-right" title="4. 2학기 수업 시간표 만들기" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="02.html" class="btn btn-neutral float-left" title="2. TOAST UI Calendar 설치 및 서버 실행하기" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright NHN Corp. All rights reserved.
+
+    </p>
+  </div> 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
