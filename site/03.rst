@@ -5,7 +5,7 @@
 HTML 초기 코드 작성
 ==============================
 
-준비된 ``src/index.html`` 파일을 열어 ``body`` 태그 내부에 컨테이너 태그를 작성해 줍니다.
+준비된 ``src/index.html`` 파일을 열어 ``body`` 태그 내부에 컨테이너 요소를 작성해 줍니다.
 
 .. code-block:: html
 
@@ -13,8 +13,8 @@ HTML 초기 코드 작성
 
   <body>
     ...
+    <!-- 캘린더 컨테이너 요소 작성 -->
     <div id="calendar" style="height: 600px;"></div>
-    ...
   </body>
 
 
@@ -22,10 +22,9 @@ HTML 초기 코드 작성
 ==============================
 
 1. 인스턴스를 생성해봅니다. 이 때 반드시 기본 옵션을 파라미터로 넘겨주어야 합니다.
-``src/index.js`` 파일을 열고 다음 코드를 추가해봅니다.
 
 * 인스턴스 생성 시 넘겨주는 파라미터
-    * 첫번째 파라미터 - 캘린더가 생성되는 컨테이너 엘리먼트 지정
+    * 첫번째 파라미터 - 캘린더가 생성되는 컨테이너 요소 지정
         * 예) ``document.getElementById('calendar')``, ``'#calendar'``
     * 두번째 파라미터 - 캘린더 옵션 정보
         * ``defaultView`` : 캘린더 초기 뷰 타입 지정 (``'month'``, ``'week'``, ``'day'``)
@@ -36,10 +35,11 @@ HTML 초기 코드 작성
 
   <a href="https://nhn.github.io/tui.calendar/latest/Options" target="_blank">링크</a>
 
+``src/index.js`` 파일을 열고 다음 코드를 추가해봅니다.
+
 .. code-block:: javascript
 
-  // src/index.js
-
+  // 캘린더를 생성하기 위해 tui-calendar 객체와 스타일 코드 삽입
   import Calendar from 'tui-calendar';
   import 'tui-calendar/dist/tui-calendar.css';
   import 'tui-date-picker/dist/tui-date-picker.css';
@@ -47,10 +47,14 @@ HTML 초기 코드 작성
 
   const container = document.getElementById('calendar');
   const options = {
-    defaultView: 'week'      // 캘린더가 초기에 그려지는 뷰 타입을 주간뷰로 지정
+    defaultView: 'week',          // 캘린더가 초기에 그려지는 뷰 타입을 주간 뷰로 지정
+    week: {                       // 주간 뷰 시간 지정
+      hourStart: 7,
+      hourEnd: 18
+    }
   };
 
-  const calendar = new Calendar(container, options); // 캘린더 인스턴스 생성
+  const calendar = new Calendar(container, options);  // 캘린더 인스턴스 생성
 
 2. 인스턴스를 생성하는 코드 아래에 API를 호출하는 코드를 추가해봅니다.
 
@@ -97,6 +101,12 @@ HTML 초기 코드 작성
 
 3. 개발 서버에 접속한 브라우저에서 캘린더가 생성되었는지 확인합니다.
 코드를 수정하면 브라우저는 자동으로 리프레시됩니다.
+
+(예제에서는 임의의 날짜를 지정하였습니다. 만약 지정하지 않는다면 오늘 날짜 기준으로 보입니다.)
+
+.. code-block:: javascript
+
+  calendar.setDate('2020-11-16');
 
 
 결과 화면
