@@ -41,3 +41,10 @@ body,h1,h2,h3,h4,h5,h6,input,select,textarea,button,legend,.rst-content .toctree
 .rst-content img {
   border: 1px solid #e1e4e5;
 }
+
+.rst-content dl:not(.docutils) dt {
+  border: none;
+  background: none;
+  color: #333333;
+  font-size: 16px;
+}
