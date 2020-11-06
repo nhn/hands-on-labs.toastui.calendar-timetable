@@ -18,7 +18,7 @@ TOAST UI Calendar는 |npm| 으로 제공됩니다. 아래와 같이 프로젝트
 
 .. |npm| raw:: html
 
-  <a href="https://www.npmjs.com" target="_blank">npm</a>
+  <a href="https://www.npmjs.com/package/tui-calendar" target="_blank">npm</a>
 
 .. code-block:: shell
 
@@ -35,9 +35,9 @@ TOAST UI Calendar는 |npm| 으로 제공됩니다. 아래와 같이 프로젝트
 아래와 같이 간단히 개발 서버를 실행하고 브라우저로 |localhost| 에 접속합니다.
 앞으로 실습하는 모든 결과는 이 개발 서버에서 확인합니다.
 
-.. |Webpack| raw:: html
+.. |webpack| raw:: html
 
-  <a href="https://webpack.js.org" target="_blank">Webpack</a>
+  <a href="https://webpack.js.org" target="_blank">webpack</a>
 
 .. |devServer| raw:: html
 

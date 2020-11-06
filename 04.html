@@ -200,7 +200,7 @@
 <h2>4.2. 일반 일정 등록하기<a class="headerlink" href="#id3" title="제목 주소">¶</a></h2>
 <p>일반 일정은 수업, 회의와 같이 시작 시간과 종료 시간을 갖는 일정입니다.
 일정 생성 시 일정 객체의 <code class="docutils literal notranslate"><span class="pre">category</span></code> 를 <code class="docutils literal notranslate"><span class="pre">'time'</span></code> 으로 지정하면 일반 일정이 됩니다.
-일정 객체의 자세한 프로퍼티 정보는 <a href="https://nhn.github.io/tui.calendar/latest/Schedule" target="_blank">일정 객체 링크</a> 를 참고하세요.</p>
+일정 객체의 자세한 속성 정보는 <a href="https://nhn.github.io/tui.calendar/latest/Schedule" target="_blank">일정 객체 링크</a> 를 참고하세요.</p>
 <ul class="simple">
 <li><dl class="simple">
 <dt>일정 객체 기본 옵션 정보</dt><dd><ul>
@@ -265,7 +265,7 @@
     <span class="nx">start</span><span class="o">:</span> <span class="s1">&#39;2020-11-17T09:00:00&#39;</span><span class="p">,</span>
     <span class="nx">end</span><span class="o">:</span> <span class="s1">&#39;2020-11-17T10:30:00&#39;</span>
   <span class="p">},</span>
-      <span class="p">{</span>
+  <span class="p">{</span>
     <span class="nx">id</span><span class="o">:</span> <span class="s1">&#39;5&#39;</span><span class="p">,</span>
     <span class="nx">calendarId</span><span class="o">:</span> <span class="s1">&#39;Elective Subject&#39;</span><span class="p">,</span>
     <span class="nx">title</span><span class="o">:</span> <span class="s1">&#39;데이터베이스&#39;</span><span class="p">,</span>
@@ -291,7 +291,7 @@
 <p>종일 일정은 생일, 여행과 같이 시작/종료 시간 없이 날짜 자체에 의미가 있는 일정입니다.
 일정 객체의 <code class="docutils literal notranslate"><span class="pre">category</span></code> 에 <code class="docutils literal notranslate"><span class="pre">'allday'</span></code> 를 지정하면 종일 일정이 됩니다.
 <code class="docutils literal notranslate"><span class="pre">start</span></code> 와 <code class="docutils literal notranslate"><span class="pre">end</span></code> 를 여러 날에 걸쳐 생성해도 종일 일정을 만들 수 있습니다.</p>
-<p>특별히 이 일정만 색상을 다르게 지정해 볼까요? 일정 프로퍼티에서 바로 색상을 지정할 수 있습니다.</p>
+<p>특별히 이 일정만 색상을 다르게 지정해 볼까요? 일정 속성에서 바로 색상을 지정할 수 있습니다.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
 <span class="nx">calendar</span><span class="p">.</span><span class="nx">createSchedules</span><span class="p">([</span>
   <span class="p">{</span>
@@ -334,7 +334,7 @@
 </div>
 <div class="section" id="id6">
 <h2>4.5. 마일스톤 등록하기<a class="headerlink" href="#id6" title="제목 주소">¶</a></h2>
-<p>마일스톤은 프로젝트 시한, 시험과 같은 기한의 의미를 갖는 일정입니다. <code class="docutils literal notranslate"><span class="pre">category</span></code> 에 <code class="docutils literal notranslate"><span class="pre">'milestone'</span></code> 를 지정하면 마일스톤 일정입니다.
+<p>마일스톤은 프로젝트 시한, 시험과 같은 기한의 의미를 갖는 일정입니다. <code class="docutils literal notranslate"><span class="pre">category</span></code> 에 <code class="docutils literal notranslate"><span class="pre">'milestone'</span></code> 를 지정하면 마일스톤 일정아 됩니다.
 마일스톤 일정도 다른 색상으로 표시해 보겠습니다.</p>
 <div class="highlight-js notranslate"><div class="highlight"><pre><span></span><span class="p">...</span>
 <span class="nx">calendar</span><span class="p">.</span><span class="nx">createSchedules</span><span class="p">([</span>
